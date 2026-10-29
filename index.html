@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerPilot | Student Career Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <aside class="sidebar">
+    <h2>🚀 CareerPilot</h2>
+
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#skills">Skill Analyzer</a>
+      <a href="#roadmap">Learning Roadmap</a>
+      <a href="#internships">Internship Tracker</a>
+    </nav>
+
+    <p class="sidebar-note">Your career journey starts here.</p>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">STUDENT CAREER ASSISTANT</p>
+        <h1 id="dashboard">Build your future.</h1>
+        <p class="subtitle">
+          Learn new skills, track progress and prepare for internships.
+        </p>
+      </div>
+
+      <div class="profile">🎓 Student</div>
+    </header>
+
+    <section class="welcome-card">
+      <div>
+        <p class="eyebrow">YOUR NEXT CHAPTER</p>
+        <h2>Small steps. Big careers.</h2>
+        <p>Turn your learning into real-world opportunities.</p>
+        <a class="primary-button" href="#skills">Explore your skills →</a>
+      </div>
+      <div class="hero-icon">🚀</div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span class="stat-icon">📚</span>
+        <p>Skills to learn</p>
+        <h2>04</h2>
+        <small>Build your foundation</small>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon">🎯</span>
+        <p>Career goal</p>
+        <h2>Developer</h2>
+        <small>One step at a time</small>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-icon">💼</span>
+        <p>Applications</p>
+        <h2 id="application-count">00</h2>
+        <small>Track your opportunities</small>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel" id="skills">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">GROW EVERY DAY</p>
+            <h2>Skill Analyzer</h2>
+          </div>
+          <span class="pill">Your profile</span>
+        </div>
+
+        <p class="subtitle">
+          Start with the skills you want to improve.
+        </p>
+
+        
+<div class="skill-controls">
+  <label for="skill-select">Choose a skill</label>
+  <select id="skill-select">
+    <option value="html">HTML & CSS</option>
+    <option value="javascript">JavaScript</option>
+    <option value="java">Java</option>
+    <option value="dsa">DSA</option>
+  </select>
+
+  <label for="skill-level">Your current level</label>
+  <select id="skill-level">
+    <option value="10">Just starting</option>
+    <option value="30">Beginner</option>
+    <option value="60">Intermediate</option>
+    <option value="85">Advanced</option>
+    <option value="100">Completed</option>
+  </select>
+
+  <button id="update-skill" type="button">Update progress</button>
+  <p id="skill-message" class="empty-state" aria-live="polite">
+    Select a skill to update your progress.
+  </p>
+</div>
+
+<div class="skill-row">
+  <div><span>HTML & CSS</span><strong id="html-level">Beginner · 35%</strong></div>
+  <div class="progress"><span id="html-bar" style="width:35%"></span></div>
+</div>
+
+<div class="skill-row">
+  <div><span>JavaScript</span><strong id="javascript-level">Beginner · 20%</strong></div>
+  <div class="progress"><span id="javascript-bar" style="width:20%"></span></div>
+</div>
+
+<div class="skill-row">
+  <div><span>Java</span><strong id="java-level">Beginner · 30%</strong></div>
+  <div class="progress"><span id="java-bar" style="width:30%"></span></div>
+</div>
+
+<div class="skill-row">
+  <div><span>DSA</span><strong id="dsa-level">Beginner · 10%</strong></div>
+  <div class="progress"><span id="dsa-bar" style="width:10%"></span></div>
+</div>
+
+      <article class="panel" id="roadmap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR ACTION PLAN</p>
+            <h2>Learning Roadmap</h2>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <span class="step-number">01</span>
+          <div>
+            <h3>Web fundamentals</h3>
+            <p>HTML, CSS and responsive design</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <span class="step-number">02</span>
+          <div>
+            <h3>JavaScript</h3>
+            <p>Logic, DOM and interactive features</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item">
+          <span class="step-number">03</span>
+          <div>
+            <h3>Build & deploy</h3>
+            <p>Projects, GitHub and portfolio</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel internship-panel" id="internships">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CAREER OPPORTUNITIES</p>
+          <h2>Internship Tracker</h2>
+        </div>
+      </div>
+
+      <form id="internship-form">
+        <input
+          type="text"
+          id="company"
+          placeholder="Company name"
+          required
+        >
+        <input
+          type="text"
+          id="role"
+          placeholder="Role (e.g. Web Developer)"
+          required
+        >
+        <button type="submit">+ Add application</button>
+      </form>
+
+      <div id="internship-list">
+        <p class="empty-state">Your internship applications will appear here.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with 💙 by a student building their future.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
